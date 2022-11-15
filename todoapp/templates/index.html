@@ -1,0 +1,19 @@
+
+    {% extends 'layout.html' %}
+    {% block body %}
+    <div style="text-align: center">
+
+        <form method="POST">
+        <label form="NewToDoTitle" name="newToDoTitle">Enter a Task Name</label>
+        <input type="text" id="newToDoTitle" placeholder="To Do Title"/><br>
+        <label form="NewToDoDesc" name="newToDoDesc">Enter a Task Desc</label>
+        <input type="text" id="newToDoDesc" placeholder="New To Do Descriptio "/><br>
+        <label form="NewToDoDesc" name="newToDoDesc">Enter a Task Due Date</label>
+        <input type="date" id="newToDoDueDate" placeholder="New To Do Due Date"/><br>
+        <button input="text" onclick="create_item()">Enter</button>
+    </form>
+    <h2><a href="{% url 'display list'%}">Display List</a></h2>
+</div>
+  {% endblock %}
+</body>
+</html>

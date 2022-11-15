@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div style="text-align: center">
+    <h1>DETAIL VIEW</h1> 
+    {% for item in all_tasks %}
+    {% if url_id == item.id %}
+    <h1>Title: {{item.title}}</h1><input type="text" placeholder="New Task Title"><button>Submit</button>
+    <h1>Desc: {{item.description}}</h1><input type="text" placeholder="New Task Description"><button>Submit</button>
+    <h1>Due: {{item.due_date}}</h1><input type="text" placeholder="New Task Due Date"><button>Submit</button>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}
+</body>
+</html>
